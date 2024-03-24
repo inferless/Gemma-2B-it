@@ -1,6 +1,6 @@
 version: 1.0.0
 
-name: Llama-2-13b-hf
+name: Gemma-2B-it
 import_source: GIT
 
 # you can choose the options between ONNX, TENSORFLOW, PYTORCH
@@ -28,8 +28,8 @@ configuration:
   scale_down_delay: '600'
 env:
   # Add your environment variables here
-  VOLUME_NFS: '/var/nfs-mount/common_llm'
-  HF_TOKEN: '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'
+  # VOLUME_NFS: '/var/nfs-mount/common_llm'
+  # HF_TOKEN: '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'
 secrets:
   # Add your secret ids here you can find it by running `inferless secrets list`
   # - 65723205-ce21-4392-a10b-3tf00c58988c
@@ -38,6 +38,6 @@ optional:
   input_file_name: input.json
   output_file_name: output.json
   runtime_file_name: inferless-runtime-config.yaml
-model_url: https://github.com/inferless/Llama-2-13b-hf.git
+model_url: https://github.com/inferless/Gemma-2B-it.git
 provider: GITHUB
 io_schema: true
