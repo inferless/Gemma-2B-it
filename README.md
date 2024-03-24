@@ -1,8 +1,6 @@
-# Llama-2-13B
-Llama-2-13B is a part of the Llama 2 family of language models developed by Meta AI.This is a template which you can use to import the model in Inferless.
-## Deploy Llama-2-13B using Inferless:
-- Deployment of Llama-2-13B model using [vLLM](https://github.com/vllm-project/vllm).
-- By using the vLLM, you can expect an average latency of 2.79 sec.
+# Gemma-2B-it
+Gemma, a family of lightweight, state-of-the-art open models by Google, inherits the same advanced research and technology as the Gemini models. These text-to-text, decoder-only large language models come in English variants, offering open weights, pre-trained versions, and fine-tuned options. Gemma excels in various text generation tasks like question answering, summarization, and reasoning. Their compact size enables deployment in resource-constrained environments like laptops, desktops, or personal cloud setups, democratizing access to cutting-edge AI models and fostering innovation for all.
+
 ---
 ## Prerequisites
 - **Git**. You would need git installed on your system if you wish to customize the repo after forking.
