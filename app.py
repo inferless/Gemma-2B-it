@@ -7,7 +7,7 @@ class InferlessPythonModel:
         repo_id = "google/gemma-2b-it" # Specify the model repository 
         # Create the model directory if it doesn't exist
         # Download the model snapshot from Hugging Face Hub
-        down = snapshot_download(
+        model_dir = snapshot_download(
             repo_id,
             token="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"  # Provide token if necessary
         )
