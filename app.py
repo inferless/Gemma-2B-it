@@ -6,11 +6,11 @@ import os
 class InferlessPythonModel:
     def initialize(self):
         repo_id = "google/gemma-2b-it" # Specify the model repository 
-        # Create the model directory if it doesn't exist
-        # Download the model snapshot from Hugging Face Hub
+        HF_TOKEN = os.getenv("HF_TOKEN")  # Access Hugging Face token from environment variable
+        
         model_dir = snapshot_download(
             repo_id,
-            token="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"  # Provide token if necessary
+            token=HF_TOKEN  # Provide token if necessary
         )
 
         # Define sampling parameters for model generation
