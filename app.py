@@ -1,25 +1,15 @@
-from vllm import LLM, SamplingParams
 from huggingface_hub import snapshot_download
 from pathlib import Path
 import os
 
 class InferlessPythonModel:
     def initialize(self):
-        repo_id = "meta-llama/Llama-2-13b-chat-hf"  # Specify the model repository ID
-        HF_TOKEN = os.getenv("HF_TOKEN")  # Access Hugging Face token from environment variable
-        VOLUME_NFS = os.getenv("VOLUME_NFS")  # Define model storage location
-        model_dir = f"{VOLUME_NFS}/{repo_id}"  # Construct model directory path
-        model_dir_path = Path(model_dir)  # Convert path to Path object
-
+        repo_id = "google/gemma-2b-it" # Specify the model repository 
         # Create the model directory if it doesn't exist
-        if not model_dir_path.exists():
-            model_dir_path.mkdir(exist_ok=True, parents=True)
-
         # Download the model snapshot from Hugging Face Hub
-        snapshot_download(
+        down = snapshot_download(
             repo_id,
-            local_dir=model_dir,
-            token=HF_TOKEN  # Provide token if necessary
+            token="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"  # Provide token if necessary
         )
 
         # Define sampling parameters for model generation
